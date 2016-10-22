@@ -24,8 +24,8 @@ public class MatrixGraph implements Graph<Vertex2D> {
 		return result;
 	}
 	
-	private static final int[] U = {-1, -1, -1,  0, 0,  1,  1, 1 };
-	private static final int[] V = {-1,  0,  1, -1, 1, -1,  0, 1 };
+	private static final int[] U = { -1, -1, -1,  0, 0,  1,  1, 1 };
+	private static final int[] V = { -1,  0,  1, -1, 1, -1,  0, 1 };
 	
 	@Override
 	public Set<Vertex2D> adjVertices(Vertex2D vertex) {

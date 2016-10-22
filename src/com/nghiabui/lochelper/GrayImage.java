@@ -21,9 +21,9 @@ public class GrayImage implements Image<Byte> {
 	@Override
 	public Byte color(int col, int row) {
 		final int c = origin.color(col, row);
-		final int r = c >> 24;
-		final int g = (c >> 16) & 0xFF;
 		final int b = (c >> 8) & 0xFF;
+		final int g = (c >> 16) & 0xFF;
+		final int r = c >> 24;
 		return (byte) ((r + g + b) / 3);
 	}
 	
