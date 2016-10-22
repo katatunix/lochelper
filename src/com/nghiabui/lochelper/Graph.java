@@ -1,10 +1,10 @@
 package com.nghiabui.lochelper;
 
-import java.util.List;
+import java.util.Set;
 
 public interface Graph<V> {
 	
-	List<V> vertices();
-	List<V> adjVertices(V v);
+	Set<V> vertices();
+	Set<V> adjVertices(V v);
 	
 }

@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.nghiabui.lochelper.Nghia">
   <grid id="27dc6" binding="panel" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="1425" height="6384"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -16,7 +16,9 @@
       <component id="b13e2" class="javax.swing.JTextArea" binding="kataTextArea">
         <constraints border-constraint="Center"/>
         <properties>
-          <text value="Katatonia"/>
+          <lineWrap value="true"/>
+          <text value="Ngân Hàng Nhà Nước Việt Nam Tuyển Kỹ Sư Công Nghệ Thông Tin!&#10;Hiện nay, Ngân hàng Nhà nước Việt Nam đang cần tuyển những Kỹ Sư Công Nghệ Thông Tin.&#10;Ngoài mức lương cạnh tranh tương xứng năng lực và hưởng đầy đủ các chế độ theo quy định của Nhà nước, các ứng viên còn cơ cơ hội trải nghiệm môi trường làm việc năng động, thân thiện và lộ trình thăng tiến minh bạch.&#10;&gt;&gt;&gt; Hãy ứng tuyển ngay hôm nay!"/>
+          <wrapStyleWord value="true"/>
         </properties>
       </component>
       <component id="77265" class="javax.swing.JLabel">

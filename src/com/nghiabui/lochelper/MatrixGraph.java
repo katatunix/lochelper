@@ -1,7 +1,7 @@
 package com.nghiabui.lochelper;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class MatrixGraph implements Graph<Vertex2D> {
 	
@@ -14,31 +14,31 @@ public class MatrixGraph implements Graph<Vertex2D> {
 	}
 	
 	@Override
-	public List<Vertex2D> vertices() {
-		final List<Vertex2D> list = new ArrayList<>();
+	public Set<Vertex2D> vertices() {
+		final Set<Vertex2D> result = new HashSet<>();
 		for (int x = 0; x < width; ++x) {
 			for (int y = 0; y < height; ++y) {
-				list.add(new Vertex2D(x, y));
+				result.add(new Vertex2D(x, y));
 			}
 		}
-		return list;
+		return result;
 	}
 	
 	private static final int[] U = {-1, -1, -1,  0, 0,  1,  1, 1 };
 	private static final int[] V = {-1,  0,  1, -1, 1, -1,  0, 1 };
 	
 	@Override
-	public List<Vertex2D> adjVertices(Vertex2D vertex) {
-		final List<Vertex2D> list = new ArrayList<>();
+	public Set<Vertex2D> adjVertices(Vertex2D vertex) {
+		final Set<Vertex2D> result = new HashSet<>();
 		final int x1 = vertex.x, y1 = vertex.y;
 		for (int i = 0; i < U.length; ++i) {
 			final int x2 = x1 + U[i];
 			final int y2 = y1 + V[i];
 			if (inside(x2, y2)) {
-				list.add(new Vertex2D(x2, y2));
+				result.add(new Vertex2D(x2, y2));
 			}
 		}
-		return list;
+		return result;
 	}
 	
 	private boolean inside(int x, int y) {

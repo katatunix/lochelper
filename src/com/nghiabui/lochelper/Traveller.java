@@ -1,9 +1,9 @@
 package com.nghiabui.lochelper;
 
-import java.util.List;
+import java.util.Set;
 
 public interface Traveller<V> {
 	
-	List<V> travel(Graph<V> graph, V start);
+	Set<V> travel(Graph<V> graph, V start);
 	
 }

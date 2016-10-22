@@ -1,7 +1,9 @@
 package com.nghiabui.lochelper;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Partitioner<V> {
 	
@@ -11,13 +13,13 @@ public class Partitioner<V> {
 		this.traveller = traveller;
 	}
 	
-	public List<List<V>> partition(Graph<V> graph) {
-		final List<V> visited = new ArrayList<>();
-		final List<List<V>> result = new ArrayList<>();
+	public List<Set<V>> partition(Graph<V> graph) {
+		final Set<V> visited = new HashSet<>();
+		final List<Set<V>> result = new ArrayList<>();
 		
 		for (V vertex : graph.vertices()) {
 			if (!visited.contains(vertex)) {
-				final List<V> vs = traveller.travel(graph, vertex);
+				final Set<V> vs = traveller.travel(graph, vertex);
 				visited.addAll(vs);
 				result.add(vs);
 			}
