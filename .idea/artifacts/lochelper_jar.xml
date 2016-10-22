@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="lochelper:jar">
+    <output-path>$PROJECT_DIR$/build</output-path>
+    <root id="root">
+      <element id="archive" name="lochelper.jar">
+        <element id="module-output" name="lochelper" />
+        <element id="module-output" name="kommon" />
+      </element>
+    </root>
+  </artifact>
+</component>
