@@ -2,9 +2,9 @@ package com.nghiabui.lochelper;
 
 import java.util.Set;
 
-public interface Graph<V> {
+public interface Graph<Vertex> {
 	
-	Set<V> vertices();
-	Set<V> adjVertices(V v);
+	Set<Vertex> vertices();
+	Set<Vertex> connected(Vertex vertex);
 	
 }

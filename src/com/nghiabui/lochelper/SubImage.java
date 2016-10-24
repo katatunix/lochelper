@@ -1,11 +1,11 @@
 package com.nghiabui.lochelper;
 
-public class SubImage<C> implements Image<C> {
+public class SubImage<Color> implements Image<Color> {
 	
-	private final Image<C> origin;
+	private final Image<Color> origin;
 	private final int colOffset, rowOffset, width, height;
 	
-	public SubImage(Image<C> origin, int colOffset, int rowOffset, int width, int height) {
+	public SubImage(Image<Color> origin, int colOffset, int rowOffset, int width, int height) {
 		this.origin = origin;
 		this.colOffset = colOffset;
 		this.rowOffset = rowOffset;
@@ -24,7 +24,7 @@ public class SubImage<C> implements Image<C> {
 	}
 	
 	@Override
-	public C color(int col, int row) {
+	public Color color(int col, int row) {
 		return origin.color(colOffset + col, rowOffset + row);
 	}
 	

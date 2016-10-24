@@ -5,23 +5,17 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Partitioner<V> {
+public class Partitioner<Vertex> {
 	
-	private final Traveller<V> traveller;
-	
-	public Partitioner(Traveller<V> traveller) {
-		this.traveller = traveller;
-	}
-	
-	public List<Set<V>> partition(Graph<V> graph) {
-		final Set<V> visited = new HashSet<>();
-		final List<Set<V>> result = new ArrayList<>();
+	public List<Set<Vertex>> partition(Graph<Vertex> graph) {
+		final Set<Vertex> visited = new HashSet<>();
+		final List<Set<Vertex>> result = new ArrayList<>();
 		
-		for (V vertex : graph.vertices()) {
+		for (Vertex vertex : graph.vertices()) {
 			if (!visited.contains(vertex)) {
-				final Set<V> vs = traveller.travel(graph, vertex);
-				visited.addAll(vs);
-				result.add(vs);
+				final Set<Vertex> connected = graph.connected(vertex);
+				visited.addAll(connected);
+				result.add(connected);
 			}
 		}
 		

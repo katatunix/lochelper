@@ -1,10 +1,10 @@
 package com.nghiabui.lochelper;
 
-public class GrayImage implements Image<Byte> {
+public class GrayscaleImage implements Image<Byte> {
 	
 	private final Image<Integer> origin;
 	
-	public GrayImage(Image<Integer> origin) {
+	public GrayscaleImage(Image<Integer> origin) {
 		this.origin = origin;
 	}
 	

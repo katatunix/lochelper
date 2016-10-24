@@ -1,9 +1,9 @@
 package com.nghiabui.lochelper;
 
-public interface Image<C> {
+public interface Image<Color> {
 	
 	int width();
 	int height();
-	C color(int col, int row);
+	Color color(int col, int row);
 	
 }
