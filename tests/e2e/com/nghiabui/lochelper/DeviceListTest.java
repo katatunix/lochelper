@@ -13,10 +13,10 @@ public class DeviceListTest {
 			final AdDeviceList adapter = new AdDeviceList(new UcDeviceList());
 			final UiDeviceList ui = new UiDeviceList(adapter);
 			adapter.setUi(ui);
-			final JFrame frame = new JFrame();
+			final JFrame frame = new JFrame("DeviceListTest");
 			frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 			frame.setContentPane(ui);
-			frame.setSize(400, 100);
+			frame.setBounds(400, 200, 400, 100);
 			frame.setVisible(true);
 		});
 	}

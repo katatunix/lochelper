@@ -16,6 +16,7 @@ public class UiDeviceList extends JPanel {
 		
 		setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 		add(buildButton());
+		add(new JLabel("Devices:"));
 		add(buildComboBox());
 	}
 	

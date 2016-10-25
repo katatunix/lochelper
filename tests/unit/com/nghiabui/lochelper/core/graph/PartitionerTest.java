@@ -1,10 +1,6 @@
-package com.nghiabui.lochelper.core;
+package com.nghiabui.lochelper.core.graph;
 
 import com.nghiabui.kommon.Point;
-import com.nghiabui.lochelper.core.graph.DfsGraph;
-import com.nghiabui.lochelper.core.graph.Graph;
-import com.nghiabui.lochelper.core.graph.MatrixGraph;
-import com.nghiabui.lochelper.core.graph.Partitioner;
 import org.junit.Test;
 
 import java.util.List;
