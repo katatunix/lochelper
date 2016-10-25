@@ -1,15 +1,15 @@
-package com.nghiabui.lochelper.core;
+package com.nghiabui.lochelper.core.graph;
 
 import com.nghiabui.kommon.Point;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class ImageGraph implements Graph<Point> {
+public class MatrixGraph implements Graph<Point> {
 	
 	private final int width, height;
 	
-	public ImageGraph(int width, int height) {
+	public MatrixGraph(int width, int height) {
 		this.width = width;
 		this.height = height;
 	}

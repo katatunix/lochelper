@@ -1,5 +1,7 @@
 package com.nghiabui.lochelper.core.adb;
 
+import com.nghiabui.lochelper.core.image.Image;
+
 public class Device {
 	
 	private final String adbDevicesLine;
@@ -24,9 +26,8 @@ public class Device {
 		return sep == -1 ? adbDevicesLine : adbDevicesLine.substring(0, sep);
 	}
 	
-	@Override
-	public String toString() {
-		return "modelName=" + modelName() + ", serial=" + serial();
+	public Image screencap() {
+		return null; // TODO
 	}
 	
 }

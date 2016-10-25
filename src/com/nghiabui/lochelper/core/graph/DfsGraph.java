@@ -1,4 +1,4 @@
-package com.nghiabui.lochelper.core;
+package com.nghiabui.lochelper.core.graph;
 
 import java.util.HashSet;
 import java.util.Set;

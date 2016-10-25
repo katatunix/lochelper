@@ -1,5 +1,7 @@
 package com.nghiabui.lochelper.core;
 
+import com.nghiabui.lochelper.core.image.RawImage;
+import com.nghiabui.lochelper.core.image.SubImage;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

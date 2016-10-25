@@ -1,4 +1,4 @@
-package com.nghiabui.lochelper.core;
+package com.nghiabui.lochelper.core.image;
 
 public class SubImage<Color> implements Image<Color> {
 	

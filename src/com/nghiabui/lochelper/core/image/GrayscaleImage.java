@@ -1,4 +1,4 @@
-package com.nghiabui.lochelper.core;
+package com.nghiabui.lochelper.core.image;
 
 public class GrayscaleImage implements Image<Byte> {
 	
@@ -21,9 +21,9 @@ public class GrayscaleImage implements Image<Byte> {
 	@Override
 	public Byte color(int col, int row) {
 		final int c = origin.color(col, row);
-		final int b = (c >> 8) & 0xFF;
-		final int g = (c >> 16) & 0xFF;
-		final int r = c >> 24;
+		final int b = c & 0xFF;
+		final int g = (c >> 8) & 0xFF;
+		final int r = (c >> 16) & 0xFF;
 		return (byte) ((r + g + b) / 3);
 	}
 	
