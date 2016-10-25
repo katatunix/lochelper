@@ -1,5 +1,7 @@
 package com.nghiabui.lochelper;
 
+import com.nghiabui.lochelper.view.Nghia;
+
 import javax.swing.*;
 
 public class Main {
