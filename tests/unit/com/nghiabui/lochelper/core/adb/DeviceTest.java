@@ -1,5 +1,6 @@
 package com.nghiabui.lochelper.core.adb;
 
+import com.nghiabui.lochelper.core.image.AwtImage;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -38,6 +39,16 @@ public class DeviceTest {
 		@Override
 		public List<String> getprop(String serial) {
 			return Arrays.asList("foo", "bar", "[ro.product.model]: Samsung Galaxy");
+		}
+		
+		@Override
+		public void pull(String serial, String devFile, String localFolder) {
+			
+		}
+		
+		@Override
+		public AwtImage screencap(String serial) {
+			return null;
 		}
 	};
 	

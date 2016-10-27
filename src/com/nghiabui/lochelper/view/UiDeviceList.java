@@ -5,7 +5,7 @@ import com.nghiabui.lochelper.adapter.AdDeviceList;
 import javax.swing.*;
 import java.util.List;
 
-public class UiDeviceList extends JPanel {
+public class UiDeviceList extends BaseUi {
 	
 	private final AdDeviceList adapter;
 	private JComboBox<String> comboBox;
@@ -20,7 +20,7 @@ public class UiDeviceList extends JPanel {
 		add(buildComboBox());
 	}
 	
-	public JComboBox<String> buildComboBox() {
+	private JComboBox<String> buildComboBox() {
 		comboBox = new JComboBox<>();
 		comboBox.addActionListener(e -> adapter.select(comboBox.getSelectedIndex()));
 		return comboBox;

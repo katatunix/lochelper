@@ -1,11 +1,6 @@
 package com.nghiabui.lochelper.core.image;
 
-public class RawImage implements Image<Integer> {
-	
-	public boolean hasAlpha() {
-		return false;
-	}
-	
+public class RawImage<Color> implements Image<Color> {
 	@Override
 	public int width() {
 		return 0;
@@ -17,8 +12,7 @@ public class RawImage implements Image<Integer> {
 	}
 	
 	@Override
-	public Integer color(int col, int row) {
+	public Color color(int col, int row) {
 		return null;
 	}
-	
 }

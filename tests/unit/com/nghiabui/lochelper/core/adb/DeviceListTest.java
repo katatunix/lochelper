@@ -1,5 +1,6 @@
 package com.nghiabui.lochelper.core.adb;
 
+import com.nghiabui.lochelper.core.image.AwtImage;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -25,7 +26,18 @@ public class DeviceListTest {
 			public List<String> getprop(String serial) {
 				return null;
 			}
+			
+			@Override
+			public void pull(String serial, String devFile, String localFolder) {
+				
+			}
+			
+			@Override
+			public AwtImage screencap(String serial) {
+				return null;
+			}
 		});
+		
 		assertTrue(list.get().isEmpty());
 	}
 	
@@ -45,7 +57,18 @@ public class DeviceListTest {
 			public List<String> getprop(String serial) {
 				return null;
 			}
+			
+			@Override
+			public void pull(String serial, String devFile, String localFolder) {
+				
+			}
+			
+			@Override
+			public AwtImage screencap(String serial) {
+				return null;
+			}
 		});
+		
 		final List<Device> devices = list.get();
 		assertEquals(2, devices.size());
 		

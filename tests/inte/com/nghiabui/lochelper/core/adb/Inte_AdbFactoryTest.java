@@ -4,11 +4,11 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class FactoryTest {
+public class Inte_AdbFactoryTest {
 	
 	@Test
 	public void createDeviceList() {
-		final List<Device> list = Factory.createDeviceList().get();
+		final List<Device> list = AdbFactory.createDeviceList().get();
 		System.out.println(list.toString());
 	}
 	

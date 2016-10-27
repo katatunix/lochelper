@@ -3,7 +3,7 @@ package com.nghiabui.lochelper.usecase;
 import com.nghiabui.kommon.Tuple;
 import com.nghiabui.lochelper.core.adb.Device;
 import com.nghiabui.lochelper.core.adb.DeviceList;
-import com.nghiabui.lochelper.core.adb.Factory;
+import com.nghiabui.lochelper.core.adb.AdbFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,13 +12,9 @@ import java.util.stream.Collectors;
 
 public class UcDeviceList {
 	
-	private final DeviceList deviceList = Factory.createDeviceList();
+	private final DeviceList deviceList = AdbFactory.createDeviceList();
 	private List<Device> curDevices = new ArrayList<>();
-	private int selectedIndex;
-	
-	public UcDeviceList() {
-		unselectDevice();
-	}
+	private int selectedIndex = -1;
 	
 	public List<Tuple<String, String>> refresh() {
 		curDevices = deviceList.get();
@@ -29,10 +25,6 @@ public class UcDeviceList {
 	
 	public void selectDevice(int index) {
 		selectedIndex = index;
-	}
-	
-	public void unselectDevice() {
-		selectedIndex = -1;
 	}
 	
 	public Optional<Device> selectedDevice() {

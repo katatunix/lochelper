@@ -12,7 +12,7 @@ public class GraphFactoryTest {
 	
 	@Test
 	public void createSimilarGrayscaleGraph() {
-		final Graph<Point> graph = GraphFactory.createSimilarGrayscaleGraph(new GrayscaleImage(new RawImage()));
+		final Graph<Point> graph = GraphFactory.createSimilarGrayscaleGraph(new GrayscaleImage(new RawImage<>()));
 		assertEquals("", graph.vertices().toString());
 	}
 	
