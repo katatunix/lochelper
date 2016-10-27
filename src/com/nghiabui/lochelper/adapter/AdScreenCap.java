@@ -5,7 +5,6 @@ import com.nghiabui.lochelper.usecase.UcScreenCap;
 import com.nghiabui.lochelper.view.UiScreenCap;
 
 import java.awt.*;
-import java.util.Optional;
 import java.util.function.Supplier;
 
 public class AdScreenCap {

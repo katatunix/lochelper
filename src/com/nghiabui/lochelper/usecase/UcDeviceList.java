@@ -1,11 +1,11 @@
 package com.nghiabui.lochelper.usecase;
 
 import com.nghiabui.kommon.Tuple;
+import com.nghiabui.lochelper.core.adb.AdbFactory;
 import com.nghiabui.lochelper.core.adb.Device;
 import com.nghiabui.lochelper.core.adb.DeviceList;
-import com.nghiabui.lochelper.core.adb.AdbFactory;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class UcDeviceList {
 	
 	private final DeviceList deviceList = AdbFactory.createDeviceList();
-	private List<Device> curDevices = new ArrayList<>();
+	private List<Device> curDevices = Collections.EMPTY_LIST;
 	private int selectedIndex = -1;
 	
 	public List<Tuple<String, String>> refresh() {
