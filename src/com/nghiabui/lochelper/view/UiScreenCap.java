@@ -9,14 +9,12 @@ import java.awt.*;
 
 public class UiScreenCap extends BaseUi {
 	
-	private final AdScreenCap adapter;
+	private AdScreenCap adapter;
 	
 	private JLabel label;
 	private JFileChooser fileChooser;
 	
-	public UiScreenCap(AdScreenCap ad) {
-		this.adapter = ad;
-		
+	public UiScreenCap() {
 		JPanel buttonPanel = buildButtonPanel();
 		
 		label = new JLabel();
@@ -31,6 +29,10 @@ public class UiScreenCap extends BaseUi {
 		add(scrollPane, BorderLayout.CENTER);
 		
 		buildFileChooser();
+	}
+	
+	public void setAdapter(AdScreenCap adapter) {
+		this.adapter = adapter;
 	}
 	
 	private JPanel buildButtonPanel() {

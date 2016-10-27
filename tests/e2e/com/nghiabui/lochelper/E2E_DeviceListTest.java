@@ -10,9 +10,9 @@ public class E2E_DeviceListTest {
 	
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(() -> {
-			final AdDeviceList ad = new AdDeviceList(new UcDeviceList());
-			final UiDeviceList ui = new UiDeviceList(ad);
-			ad.setUi(ui);
+			final UiDeviceList ui = new UiDeviceList();
+			final AdDeviceList ad = new AdDeviceList(new UcDeviceList(), ui);
+			ui.setAdapter(ad);
 			
 			final JFrame frame = new JFrame("E2E_DeviceListTest");
 			frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

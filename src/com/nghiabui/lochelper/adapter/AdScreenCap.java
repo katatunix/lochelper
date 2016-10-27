@@ -10,13 +10,10 @@ import java.util.function.Supplier;
 public class AdScreenCap {
 	
 	private final UcScreenCap uc;
-	private UiScreenCap ui;
+	private final UiScreenCap ui;
 	
-	public AdScreenCap(UcScreenCap uc) {
+	public AdScreenCap(UcScreenCap uc, UiScreenCap ui) {
 		this.uc = uc;
-	}
-	
-	public void setUi(UiScreenCap ui) {
 		this.ui = ui;
 	}
 	

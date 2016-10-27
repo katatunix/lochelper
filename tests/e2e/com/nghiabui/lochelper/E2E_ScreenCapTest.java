@@ -14,14 +14,14 @@ public class E2E_ScreenCapTest {
 	
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(() -> {
+			final UiDeviceList uiDeviceList = new UiDeviceList();
 			final UcDeviceList ucDeviceList = new UcDeviceList();
-			final AdDeviceList adDeviceList = new AdDeviceList(ucDeviceList);
-			final UiDeviceList uiDeviceList = new UiDeviceList(adDeviceList);
-			adDeviceList.setUi(uiDeviceList);
+			final AdDeviceList adDeviceList = new AdDeviceList(ucDeviceList, uiDeviceList);
+			uiDeviceList.setAdapter(adDeviceList);
 			
-			final AdScreenCap adScreenCap = new AdScreenCap(new UcScreenCap(ucDeviceList));
-			final UiScreenCap uiScreenCap = new UiScreenCap(adScreenCap);
-			adScreenCap.setUi(uiScreenCap);
+			final UiScreenCap uiScreenCap = new UiScreenCap();
+			final AdScreenCap adScreenCap = new AdScreenCap(new UcScreenCap(ucDeviceList), uiScreenCap);
+			uiScreenCap.setAdapter(adScreenCap);
 			
 			final JFrame frame = new JFrame("E2E_ScreenCapTest");
 			frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -31,7 +31,7 @@ public class E2E_ScreenCapTest {
 			container.add(uiDeviceList, BorderLayout.NORTH);
 			container.add(uiScreenCap, BorderLayout.CENTER);
 			
-			frame.setBounds(10, 10, 1000, 720);
+			frame.setBounds(100, 50, 1000, 720);
 			frame.setVisible(true);
 		});
 	}

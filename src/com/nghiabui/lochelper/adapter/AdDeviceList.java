@@ -11,13 +11,10 @@ import java.util.stream.Collectors;
 public class AdDeviceList {
 	
 	private final UcDeviceList uc;
-	private UiDeviceList ui;
+	private final UiDeviceList ui;
 	
-	public AdDeviceList(UcDeviceList uc) {
+	public AdDeviceList(UcDeviceList uc, UiDeviceList ui) {
 		this.uc = uc;
-	}
-	
-	public void setUi(UiDeviceList ui) {
 		this.ui = ui;
 	}
 	

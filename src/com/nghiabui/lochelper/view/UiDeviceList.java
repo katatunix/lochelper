@@ -7,17 +7,18 @@ import java.util.List;
 
 public class UiDeviceList extends BaseUi {
 	
-	private final AdDeviceList adapter;
+	private AdDeviceList adapter;
 	private JComboBox<String> comboBox;
 	
-	public UiDeviceList(AdDeviceList adapter) {
-		super();
-		this.adapter = adapter;
-		
+	public UiDeviceList() {
 		setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 		add(buildButton());
 		add(new JLabel("Devices:"));
 		add(buildComboBox());
+	}
+	
+	public void setAdapter(AdDeviceList adapter) {
+		this.adapter = adapter;
 	}
 	
 	private JComboBox<String> buildComboBox() {
